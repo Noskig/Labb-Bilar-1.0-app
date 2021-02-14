@@ -1,0 +1,42 @@
+﻿@model Labb_Bilar_1._0.Models.Bil
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Bil</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Årsmodell)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Årsmodell)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Motortyp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Motortyp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tillverkare)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tillverkare.Namn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Modell)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Modell)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
